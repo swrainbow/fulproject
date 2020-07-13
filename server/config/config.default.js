@@ -26,5 +26,16 @@ module.exports = appInfo => {
   return {
     ...config,
     ...userConfig,
+    security: {
+      csrf: {
+        enable: false,
+      },
+    },
+    mongoose: {
+      client: {
+        url: 'mongodb://122.51.68.223:27017/swhub',
+        options: {},
+      },
+    },
   };
 };
